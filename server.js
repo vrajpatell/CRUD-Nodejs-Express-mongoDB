@@ -10,7 +10,7 @@ console.log('listening to express server 3000')
 })
 app.use(express.static('public'))
 
-MongoClient.connect('mongodb+srv://vraj:project1@cluster0.ngl79.mongodb.net/quotes?retryWrites=true&w=majority',  { useUnifiedTopology: true })
+MongoClient.connect('mongodb+srv://<username>:<password>@cluster0.ngl79.mongodb.net/<DatabaseName>?retryWrites=true&w=majority',  { useUnifiedTopology: true })
 .then(client => {
   console.log('Connected to Database')
   const db = client.db('vraj-quotes')
